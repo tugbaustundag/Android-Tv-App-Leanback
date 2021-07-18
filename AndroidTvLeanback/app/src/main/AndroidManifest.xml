@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.smality.androidtvleanback"
+    tools:ignore="MissingLeanbackLauncher">
+    <!--Projenin Google Play‘de bir TV uygulaması olarak kabul edilmesi için eklendi-->
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+    <!--Projenin Android TV'nin gerektirdiği Leanback UI kullanacağını belirtelim-->
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AndroidTvLeanback"
+        android:banner="@mipmap/ic_launcher">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
